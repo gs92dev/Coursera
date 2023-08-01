@@ -37,13 +37,13 @@ console.log(result);
 //Map structure
 let bestBoxers = new Map();
 // to include an element in the map we need to use the set method
-bestBoxers.set(1, "The Champion");
+bestBoxers.set("first", "The Champion");
 bestBoxers.set(2, "The Runner-up");
 bestBoxers.set(3, "The third place");
 
 console.log(bestBoxers);
 //to get just one element from the Map we need to use the get method
-let first = bestBoxers.get(1); // 'The Champion'
+let first = bestBoxers.get("first"); // 'The Champion'
 console.log(first);
 
 // Set
