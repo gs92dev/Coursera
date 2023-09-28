@@ -1,0 +1,38 @@
+body {
+    padding: 30px;
+}
+
+.box {
+
+    background-color: lightcoral;
+
+    width: 50px;
+
+    height: 200px;
+
+    animation: myanimation 10s infinite ease-in;
+}
+
+/* @keyframes myanimation {
+    0% {
+        width: 50px;
+    }
+
+    50% {
+        background-color: aquamarine;
+        height: 20px;
+    }
+
+    100% {
+        width: 100px;
+    }
+} */
+@keyframes myanimation {
+    0% {
+        width: 50px;
+    }
+
+    100% {
+        width: 200px;
+    }
+}
