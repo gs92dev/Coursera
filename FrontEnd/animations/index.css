@@ -19,8 +19,16 @@ p::before {
     background: silver;
     height: 10px;
     margin-top: -20px;
-    margin-left: 101px;
+    width: 100%;
 
+}
+p::after{
+    display: block;
+    content: '';
+    background: silver;
+    height: 15px;
+    margin-top: 20px;
+ 
 }
 
 /* @keyframes myanimation {
