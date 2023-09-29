@@ -11,6 +11,9 @@ class Person {
     this.energy = this.energy - 10;
   }
 }
+const Guilherme = new Person("Guilherme",30,100);
+const {name,age} = Guilherme
+console.log(name,age)
 class Worker extends Person {
   constructor(name, age, energy, xp = 0, hourlyWage = 10) {
     super(name, age, energy);

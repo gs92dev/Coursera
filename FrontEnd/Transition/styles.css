@@ -37,3 +37,11 @@
 	transform: rotateX(360deg);
 	transition: 1.5s;
 }
+
+div p {
+	color: red;
+}
+
+div+p {
+	color: blue;
+}
