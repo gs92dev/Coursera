@@ -2,6 +2,23 @@ body {
     padding: 30px;
 }
 
+nav {
+    position: relative;
+    left: -20%
+}
+
+.translate {
+    transition: linear 5s;
+    transform: translateX(500px);
+}
+.translate2 {
+    transition: linear 5s;
+    transform: translateX(-500px);
+}
+#button{
+    background-color: blue;
+}
+
 .box {
 
     background-color: lightcoral;
@@ -22,13 +39,14 @@ p::before {
     width: 100%;
 
 }
-p::after{
+
+p::after {
     display: block;
     content: '';
     background: silver;
     height: 15px;
     margin-top: 20px;
- 
+
 }
 
 /* @keyframes myanimation {
