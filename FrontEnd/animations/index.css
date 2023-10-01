@@ -10,11 +10,14 @@ nav {
 .translate {
     transition: linear 2s;
     transform: translateX(200px);
+
 }
 
 .translate2 {
     transition: linear 2s;
+    transform: translateY(180);
     transform: translateX(-200px);
+    
 }
 
 #button {
