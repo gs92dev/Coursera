@@ -3,21 +3,24 @@ body {
 }
 
 nav {
+    background-color: green;
     position: relative;
-    left: -20%
+    left: -20%;
+    width: fit-content;
+
 }
 
 .translate {
     transition: linear 2s;
-    transform: translateX(200px);
+    transform: translateX(300px);
 
 }
 
 .translate2 {
     transition: linear 2s;
     transform: translateY(180);
-    transform: translateX(-200px);
-    
+    transform: translateX(-300px);
+
 }
 
 #button {
