@@ -12,7 +12,7 @@ nav {
 
 .translate {
     transition: linear 2s;
-    transform: translateX(300px);
+    transform: translateX(400px);
 
 }
 
