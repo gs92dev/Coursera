@@ -1,14 +1,13 @@
 import "./App.css";
+import { Heading } from "./Heading";
 
-function Header() {
-  return(
-    <h1>Hello World</h1>)
-}
-  
-  
+
+let firstName = ["Guilherme","Daniel","John"]
 
 function App() {
-  return <Header />;
+  return( 
+  <Heading firstName={firstName}/>
+  )
 }
 
 export default App;
