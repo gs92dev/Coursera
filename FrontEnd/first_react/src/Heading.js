@@ -1,5 +1,6 @@
 export function Heading({ firstName }) {
-  return firstName.map(function (name) {
-    return <h1 key={firstName}>Hello, {name}</h1>;
+  return firstName.map(function (name, index) {
+    console.log(index);
+    return <h1 key={index}>Hello, {name}</h1>;
   });
 }
