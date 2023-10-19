@@ -2,6 +2,7 @@ import "./App.css";
 import { Heading } from "./Heading";
 import Card from "./Card";
 import Button from "./Button";
+import Test from "./Test";
 
 let firstName = ["Guilherme", "Daniel", "John"];
 
@@ -13,6 +14,7 @@ function App() {
       <Card h3="First card's h3" />
       <Button title="Click me" />
       <Button title="Click me 2" />
+      <Test />
     </>
   );
 }
