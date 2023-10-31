@@ -4,8 +4,17 @@ import AboutLittleLemon from "./AboutLittleLemon";
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from "./Contact";
 import Image from "./Image";
+import ReactPlayer from "react-player";
 
 function App() {
+  const bird1 = new Audio(
+    "https://upload.wikimedia.org/wikipedia/commons/9/9b/Hydroprogne_caspia_-_Caspian_Tern_XC432679.mp3"
+  );
+
+  const bird2 = new Audio(
+    "https://upload.wikimedia.org/wikipedia/commons/b/b5/Hydroprogne_caspia_-_Caspian_Tern_XC432881.mp3"
+  );
+
   return (
     <div>
       <nav>
