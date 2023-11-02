@@ -4,7 +4,6 @@ import AboutLittleLemon from "./AboutLittleLemon";
 import { Routes, Route, Link } from "react-router-dom";
 import Contact from "./Contact";
 import Image from "./Image";
-import Audio from "./Audio";
 
 function App() {
   return (
@@ -26,12 +25,12 @@ function App() {
           Audio
         </Link>
       </nav>
+
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
         <Route path="/about" element={<AboutLittleLemon />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/image" element={<Image />}></Route>
-        <Route path="/audio" element={<Audio />}></Route>
       </Routes>
     </div>
   );
