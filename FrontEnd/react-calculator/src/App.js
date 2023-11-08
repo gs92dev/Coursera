@@ -1,4 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
+import Transitioning from "./Transitioning";
+import MyComponent from "./MyComponent";
 import "./App.css";
 
 function App() {
@@ -74,6 +76,9 @@ function App() {
           </button>
         </div>
       </form>
+      <Transitioning />
+      <MyComponent />
+      <p>Hey</p>
     </div>
   );
 }
