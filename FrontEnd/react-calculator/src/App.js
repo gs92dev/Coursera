@@ -12,19 +12,23 @@ function App() {
   function plus(e) {
     e.preventDefault();
     setResult((result) => result + Number(inputRef.current.value));
+    setInput("");
   }
 
   function minus(e) {
     e.preventDefault();
     setResult((result) => result - Number(inputRef.current.value));
+    setInput("");
   }
 
   function times(e) {
     e.preventDefault();
     if (result === 0) {
       setResult((result) => (result = Number(inputRef.current.value)));
+      setInput("");
     } else {
       setResult((result) => result * Number(inputRef.current.value));
+      setInput("");
     }
   }
 
@@ -32,9 +36,11 @@ function App() {
     e.preventDefault();
     if (result === 0) {
       setResult((result) => (result = Number(inputRef.current.value)));
+      setInput("");
     } else {
       setResult((result) => result / Number(inputRef.current.value));
       setInput(0);
+      setInput("");
     }
   }
 
