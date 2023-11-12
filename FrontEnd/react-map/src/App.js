@@ -1,5 +1,6 @@
-import './App.css';
+import "./App.css";
 import DessertsList from "./DessertsList";
+import Dessert from "./Dessert";
 
 const desserts = [
   {
@@ -23,12 +24,21 @@ const desserts = [
     createdAt: "2022-01-04",
   },
 ];
+const desserts2 = [
+  {
+    title: "Chocolate Cake",
+    description: "Chocolate cake is a cake flavored with melted chocolate",
+    calories: 500,
+  },
+];
 
 function App() {
   return (
     <div className="App">
       <h2>List of low calorie desserts:</h2>
-      <DessertsList data={desserts} />
+      {/* <DessertsList data={desserts} />
+      <br /> */}
+      <DessertsList data={desserts2} />
     </div>
   );
 }
