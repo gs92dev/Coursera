@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+  padding: 16px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+li {
+  justify-content: center;
+  list-style: square;
+  color: blue;
+  width: 200px;
+}
+
+li:hover {
+  font-size: large;
+  background-color: bisque;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
