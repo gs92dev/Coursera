@@ -38,7 +38,7 @@ function App() {
       <h2>List of low calorie desserts:</h2>
       {/* <DessertsList data={desserts} />
       <br /> */}
-      <DessertsList data={desserts2} />
+      <Dessert data={desserts2} />
     </div>
   );
 }
