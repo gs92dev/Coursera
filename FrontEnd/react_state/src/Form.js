@@ -1,5 +1,6 @@
+import "./App.css";
 import { useState } from "react";
-import { validateEmail } from "./utils";
+import { validateEmail } from "../src/utils";
 
 const PasswordErrorMessage = () => {
   return (
@@ -7,7 +8,7 @@ const PasswordErrorMessage = () => {
   );
 };
 
-export default function Form() {
+function Form() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,33 +19,30 @@ export default function Form() {
   const [role, setRole] = useState("role");
 
   const getIsFormValid = () => {
-    // Implement this function
-    return false;
+    return (
+      firstName &&
+      validateEmail(email) &&
+      password.value.length >= 8 &&
+      role !== "role"
+    );
   };
 
   const clearForm = () => {
-    setFirstName(" ")
-    setLastName(" ")
-    setPassword(" ")
-    setRole(" ")
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword({
+      value: "",
+      isTouched: false,
+    });
+    setRole("role");
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     alert("Account created!");
     clearForm();
   };
-  const handleName = (e) => {
-    setFirstName(e.target.firstName)
-  }
-
-  const handleLastName = (e) => {
-    setLastName(e.target.lastName)
-  }
-  const handleEmail = (e) => {
-    setEmail(e.target.email)
-  }
-
 
   return (
     <div className="App">
@@ -55,29 +53,60 @@ export default function Form() {
             <label>
               First name <sup>*</sup>
             </label>
-            <input value={firstName} onChange={handleName} placeholder="First name" />
+            <input
+              value={firstName}
+              onChange={(e) => {
+                setFirstName(e.target.value);
+              }}
+              placeholder="First name"
+            />
           </div>
           <div className="Field">
             <label>Last name</label>
-            <input value={lastName} onChange={handleLastName} placeholder="Last name" />
+            <input
+              value={lastName}
+              onChange={(e) => {
+                setLastName(e.target.value);
+              }}
+              placeholder="Last name"
+            />
           </div>
           <div className="Field">
             <label>
               Email address <sup>*</sup>
             </label>
-            <input value={email} onChange={handleEmail} placeholder="Email address" />
+            <input
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="Email address"
+            />
           </div>
           <div className="Field">
             <label>
               Password <sup>*</sup>
             </label>
-            <input placeholder="Password" />
+            <input
+              value={password.value}
+              type="password"
+              onChange={(e) => {
+                setPassword({ ...password, value: e.target.value });
+              }}
+              onBlur={() => {
+                setPassword({ ...password, isTouched: true });
+              }}
+              placeholder="Password"
+            />
+            {password.isTouched && password.value.length < 8 ? (
+              <PasswordErrorMessage />
+            ) : null}
           </div>
           <div className="Field">
             <label>
               Role <sup>*</sup>
             </label>
-            <select>
+            <select value={role} onChange={(e) => setRole(e.target.value)}>
               <option value="role">Role</option>
               <option value="individual">Individual</option>
               <option value="business">Business</option>
@@ -92,4 +121,4 @@ export default function Form() {
   );
 }
 
-
+export default Form;
