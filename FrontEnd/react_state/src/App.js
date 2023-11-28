@@ -16,7 +16,7 @@ function App() {
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="/fruits">What Fruits we have today</Link>
-        <Link to="/form">Take a look on our form</Link>
+        <Link to="/form">Form with state</Link>
       </div>
       <Routes>
         <Route path="/" element={<FruitsCounter fruits={fruits} />} />
