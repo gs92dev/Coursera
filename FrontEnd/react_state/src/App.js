@@ -22,6 +22,7 @@ function App() {
         <Route path="/" element={<FruitsCounter fruits={fruits} />} />
         <Route path="/fruits" element={<Fruits fruits={fruits} />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
     </div>
   );
