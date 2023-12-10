@@ -7,7 +7,7 @@ const Title = ({ children }) => {
   return (
     <h2
       style={{
-        color: theme === "light" ? "black" : "white",
+        color: theme === "light" ? "gray" : "white",
       }}
     >
       {children}
@@ -20,7 +20,7 @@ const Paragraph = ({ children }) => {
   return (
     <p
       style={{
-        color: theme === "light" ? "black" : "white",
+        color: theme === "light" ? "gray" : "white",
       }}
     >
       {children}
@@ -65,7 +65,7 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundColor: theme === "light" ? "white" : "black",
+        backgroundColor: theme === "light" ? "white" : "#282b2d",
       }}
     >
       <Header />
