@@ -9,8 +9,8 @@ const Switch = () => {
        type="checkbox"
        checked={theme === "light"}
        onChange={toggleTheme}
-     />
-     <span className="slider round" />
+     />     
+     <span className="slider round" />     
    </label>
  );
 };

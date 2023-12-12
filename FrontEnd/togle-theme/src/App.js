@@ -70,6 +70,10 @@ function App() {
     >
       <Header />
       <Page />
+      <label/>
+      <input type="checkbox" style={{
+        backgroundColor:"black", borderColor:"pink",
+      }}/>
     </div>
   );
 }
